@@ -6,7 +6,7 @@ resource "aws_subnet" "private" {
   availability_zone       = "${element(var.azs, count.index)}"
   count                   = "${length(var.cidrs)}"
   map_public_ip_on_launch = "false"
-
+  
   tags = "${merge(var.tags, map("Name", format("%s.%s", var.name, element(var.azs, count.index))))}"
 }
 

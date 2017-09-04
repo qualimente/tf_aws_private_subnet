@@ -24,11 +24,6 @@ variable "nat_gateway_ids" {
   type = "list"
 }
 
-variable "map_public_ip_on_launch" {
-  default = "false"
-  type = "string"
-}
-
 variable "tags" {
   description = "A map of tags to add to all resources"
   default = {}
